@@ -558,7 +558,7 @@
   but an important part seems to be strided convolutions and pooling operations, which create high-frequency patterns in the gradient <d-cite key="odena2016deconvolution"></d-cite>.
 </p>
 
-<figcaption>Each <b>strided convolution or pooling</b> creates checkerboard patterns in the gradient magnitudes when we backprop through it. <dt-cite key="odena2016deconvolution"></dt-cite></figcaption>
+<figcaption>Each <b>strided convolution or pooling</b> creates checkerboard patterns in the gradient magnitudes when we backprop through a neuron. <dt-cite key="odena2016deconvolution"></dt-cite></figcaption>
 <figure style="grid-column: page;">
   <d-figure id="frequency-artifacts"></d-figure>
 </figure>
@@ -691,7 +691,7 @@
   As a result, using the right preconditioner can make an optimization problem radically easier.
 </p>
 <p>
-  How can we chose a preconditioner that will give us these benefits?
+  How can we choose a preconditioner that will give us these benefits?
   A good first guess is one that makes your data decorrelated and whitened.
   In the case of images this means doing gradient descent in the Fourier basis,
   <d-footnote>
